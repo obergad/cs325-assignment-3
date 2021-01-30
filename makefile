@@ -7,9 +7,9 @@ knapsack: knapsack.o
 
 knapsack.o: knapsack.cpp
 	$(CC) -c knapsack.cpp
-	
+
 shopping: shopping.o
-		$(CC) shopping.o -o knapsack
+		$(CC) shopping.o -o shopping
 
 shopping.o: shopping.cpp
 	$(CC) -c shopping.cpp
