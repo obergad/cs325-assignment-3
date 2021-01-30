@@ -1,12 +1,18 @@
 CC = g++ -std=c++11 -g
 
-all:  knapsack
+all:  knapsack shopping
 
-generatetxt: knapsack.o
+knapsack: knapsack.o
 		$(CC) knapsack.o -o knapsack
 
-generatetxt.o: knapsack.cpp
+knapsack.o: knapsack.cpp
 	$(CC) -c knapsack.cpp
+	
+shopping: shopping.o
+		$(CC) shopping.o -o knapsack
+
+shopping.o: shopping.cpp
+	$(CC) -c shopping.cpp
 
 clean:
-	rm -f *.o generatetxt
+	rm -f *.o knapsack shopping
